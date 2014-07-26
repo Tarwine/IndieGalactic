@@ -28,4 +28,7 @@ class ARoverGamePawn : public AWheeledVehicle
 	void OnHandbrakePressed();
 	/** Handle handbrake released */
 	void OnHandbrakeReleased();
+
+	void RotateCameraX(float Val);
+	void RotateCameraY(float Val);
 };

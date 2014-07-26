@@ -62,6 +62,9 @@ void ARoverGamePawn::SetupPlayerInputComponent(class UInputComponent* InputCompo
 	InputComponent->BindAxis("MoveForward", this, &ARoverGamePawn::MoveForward);
 	InputComponent->BindAxis("MoveRight", this, &ARoverGamePawn::MoveRight);
 
+	InputComponent->BindAxis("CameraX", this, &ARoverGamePawn::RotateCameraX);
+	InputComponent->BindAxis("CameraY", this, &ARoverGamePawn::RotateCameraY);
+
 	InputComponent->BindAction("Handbrake", IE_Pressed, this, &ARoverGamePawn::OnHandbrakePressed);
 	InputComponent->BindAction("Handbrake", IE_Released, this, &ARoverGamePawn::OnHandbrakeReleased);
 }
@@ -86,3 +89,14 @@ void ARoverGamePawn::OnHandbrakeReleased()
 	GetVehicleMovementComponent()->SetHandbrakeInput(false);
 }
 
+void ARoverGamePawn::RotateCameraX(float Val){
+	if (Val != 0.0f){
+		Camera->AddLocalRotation(FRotator(0.f, (Val * 2.0), 0.0f));
+	}
+}
+
+void ARoverGamePawn::RotateCameraY(float Val){
+	if (Val != 0.0f){
+		SpringArm->AddLocalRotation(FRotator((Val * 2.0), 0.0f, 0.0f));
+	}
+}

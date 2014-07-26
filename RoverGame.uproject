@@ -1,0 +1,13 @@
+{
+	"FileVersion": 3,
+	"EngineAssociation": "{209A067F-425F-0EBE-13BC-E89E087142C2}",
+	"Category": "",
+	"Description": "",
+	"Modules": [
+		{
+			"Name": "RoverGame",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		}
+	]
+}

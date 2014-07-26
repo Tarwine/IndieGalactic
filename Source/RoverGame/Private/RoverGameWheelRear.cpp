@@ -6,8 +6,8 @@
 URoverGameWheelRear::URoverGameWheelRear(const class FPostConstructInitializeProperties& PCIP)
 	: Super(PCIP)
 {
-	ShapeRadius = 35.f;
-	ShapeWidth = 10.0f;
+	ShapeRadius = 16.f;
+	ShapeWidth = 20.0f;
 	bAffectedByHandbrake = true;
 	SteerAngle = 0.f;
 }

@@ -9,7 +9,7 @@ ARoverGamePawn::ARoverGamePawn(const class FPostConstructInitializeProperties& P
 	: Super(PCIP)
 {
 	// Car mesh
-	static ConstructorHelpers::FObjectFinder<USkeletalMesh> CarMesh(TEXT("/Game/Sedan/Sedan_SkelMesh.Sedan_SkelMesh"));
+	static ConstructorHelpers::FObjectFinder<USkeletalMesh> CarMesh(TEXT("/Game/Meshes/Rover_008.Rover_008"));
 	Mesh->SetSkeletalMesh(CarMesh.Object);
 
 	static ConstructorHelpers::FClassFinder<UObject> AnimBPClass(TEXT("/Game/Sedan/Sedan_AnimBP"));

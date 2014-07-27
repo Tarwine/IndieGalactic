@@ -13,8 +13,8 @@ class ARoverGamePawn : public AWheeledVehicle
 	TSubobjectPtr<class USpringArmComponent> SpringArm;*/
 
 	/** Camera component that will be our viewpoint */
-	UPROPERTY(Category = Camera, VisibleDefaultsOnly, BlueprintReadOnly)
-	TSubobjectPtr<class UCameraComponent> Camera;
+//	UPROPERTY(Category = Camera, VisibleDefaultsOnly, BlueprintReadOnly)
+//	TSubobjectPtr<class UCameraComponent> Camera;
 
 	UFUNCTION(BlueprintImplementableEvent)
         virtual void OnMotorMovement();

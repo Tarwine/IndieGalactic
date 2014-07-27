@@ -16,6 +16,9 @@ class ARoverGamePawn : public AWheeledVehicle
 	UPROPERTY(Category = Camera, VisibleDefaultsOnly, BlueprintReadOnly)
 	TSubobjectPtr<class UCameraComponent> Camera;
 
+	UFUNCTION(BlueprintImplementableEvent)
+        virtual void OnMotorMovement();
+
 	// Begin Pawn interface
 	virtual void SetupPlayerInputComponent(class UInputComponent* InputComponent) override;
 	// End Pawn interface

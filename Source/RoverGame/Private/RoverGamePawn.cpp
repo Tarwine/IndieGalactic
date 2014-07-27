@@ -71,11 +71,13 @@ void ARoverGamePawn::SetupPlayerInputComponent(class UInputComponent* InputCompo
 void ARoverGamePawn::MoveForward(float Val)
 {
 	GetVehicleMovementComponent()->SetThrottleInput(Val);
+	if (Val != 0.0f) OnMotorMovement();
 }
 
 void ARoverGamePawn::MoveRight(float Val)
 {
 	GetVehicleMovementComponent()->SetSteeringInput(Val);
+	if (Val != 0.0f) OnMotorMovement();
 }
 
 void ARoverGamePawn::OnHandbrakePressed()

@@ -37,7 +37,7 @@ ARoverGamePawn::ARoverGamePawn(const class FPostConstructInitializeProperties& P
 	Vehicle4W->WheelSetups[3].AdditionalOffset = FVector(0.f, 12.f, 0.f);
 
 	// Create a spring arm component
-	SpringArm = PCIP.CreateDefaultSubobject<USpringArmComponent>(this, TEXT("SpringArm0"));
+	/*SpringArm = PCIP.CreateDefaultSubobject<USpringArmComponent>(this, TEXT("SpringArm0"));
 	SpringArm->TargetOffset = FVector(0.f, 0.f, 200.f);
 	SpringArm->SetRelativeRotation(FRotator(-15.f, 0.f, 0.f));
 	SpringArm->AttachTo(RootComponent);
@@ -45,11 +45,11 @@ ARoverGamePawn::ARoverGamePawn(const class FPostConstructInitializeProperties& P
 	SpringArm->bEnableCameraRotationLag = true;
 	SpringArm->CameraRotationLagSpeed = 7.f;
 	SpringArm->bInheritPitch = false;
-	SpringArm->bInheritRoll = false;
+	SpringArm->bInheritRoll = false;*/
 
 	// Create camera component 
 	Camera = PCIP.CreateDefaultSubobject<UCameraComponent>(this, TEXT("Camera0"));
-	Camera->AttachTo(SpringArm, USpringArmComponent::SocketName);
+	Camera->AttachTo(RootComponent);
 	Camera->bUseControllerViewRotation = false;
 	Camera->FieldOfView = 90.f;
 }

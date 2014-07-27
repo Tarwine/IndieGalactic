@@ -9,8 +9,8 @@ class ARoverGamePawn : public AWheeledVehicle
 	GENERATED_UCLASS_BODY()
 
 	/** Spring arm that will offset the camera */
-	UPROPERTY(Category = Camera, VisibleDefaultsOnly, BlueprintReadOnly)
-	TSubobjectPtr<class USpringArmComponent> SpringArm;
+	/*UPROPERTY(Category = Camera, VisibleDefaultsOnly, BlueprintReadOnly)
+	TSubobjectPtr<class USpringArmComponent> SpringArm;*/
 
 	/** Camera component that will be our viewpoint */
 	UPROPERTY(Category = Camera, VisibleDefaultsOnly, BlueprintReadOnly)

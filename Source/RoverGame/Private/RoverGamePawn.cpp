@@ -48,10 +48,10 @@ ARoverGamePawn::ARoverGamePawn(const class FPostConstructInitializeProperties& P
 	SpringArm->bInheritRoll = false;*/
 
 	// Create camera component 
-	Camera = PCIP.CreateDefaultSubobject<UCameraComponent>(this, TEXT("Camera0"));
-	Camera->AttachTo(RootComponent);
+	/*Camera = PCIP.CreateDefaultSubobject<UCameraComponent>(this, TEXT("Camera0"));
+	//Camera->AttachTo(RootComponent, "HeadSocket");
 	Camera->bUseControllerViewRotation = false;
-	Camera->FieldOfView = 90.f;
+	Camera->FieldOfView = 90.f;*/
 }
 
 void ARoverGamePawn::SetupPlayerInputComponent(class UInputComponent* InputComponent)
@@ -92,7 +92,7 @@ void ARoverGamePawn::OnHandbrakeReleased()
 
 void ARoverGamePawn::RotateCameraX(float Val){
 	if (Val != 0.0f){
-		Camera->AddLocalRotation(FRotator(0.f, (Val * 2.0), 0.0f));
+		//Camera->AddLocalRotation(FRotator(0.f, (Val * 2.0), 0.0f));
 	}
 }
 
